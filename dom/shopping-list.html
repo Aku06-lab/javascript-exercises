@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping List Example</title>
+        <style>
+            li {
+                margin-bottom: 10px;
+            }
+
+            li button {
+                font-size: 12px;
+                margin-left: 20px;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1> My Shopping List</h1>
+
+        <form>
+            <label for="item">Enter a new item:</label>
+            <input type="text" name="item" id="item">
+            <button> Add Item</button>
+        </form>
+
+        <ul>
+
+        </ul>
+        <script>
+            const ul = document.querySelector("ul");
+            const input = document.querySelector("input");
+            const btn = document.querySelector("button")
+            let logElement = document.createElement("pre");
+            document.body.appendChild(logElement);
+
+            input.addEventListener("keyup", () => {
+                    logElement.innerText = `${input.value}`;
+
+                })
+
+            
+            btn.addEventListener("click",(event) => {
+                event.preventDefault()  
+                
+                const li_tag = document.createElement("li");
+                const span = document.createElement("span");
+                const btn2 = document.createElement("button")
+
+                li_tag.appendChild(span);
+                li_tag.appendChild(btn2);
+
+                span.textContent = `${logElement.innerText}`;
+                btn2.textContent = "Delete";
+
+                ul.appendChild(li_tag);
+                input.value = "";
+                logElement.innerText =""
+                btn2.addEventListener("click", () => {
+                    ul.removeChild(li_tag);
+                })
+                input.focus();
+
+            })
+
+            
+            
+            
+
+
+
+
+
+
+        </script>
+
+
+
+    </body>
+</html>

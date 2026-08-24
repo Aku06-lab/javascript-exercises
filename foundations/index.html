@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> my exercises</title>
+
+</head>
+
+<body>
+    <script>
+        function add7(numb) {
+            const num = numb + 7;
+            return num
+
+        }
+
+        console.log(add7(3))
+        console.log(add7(4))
+
+        function multiply(num1, num2) {
+            const output_num = num1 * num2;
+            return output_num
+        }
+
+        console.log(multiply(4, 3))
+
+        function capitalize(string_1) {
+            let string1 = String(string_1)
+            string1 = string1.toLowerCase()
+            return string1.charAt(0).toUpperCase() + string1.slice(1)
+        }
+
+        console.log(capitalize("hello aku"))
+        console.log(capitalize("HELLO AKU"))
+        console.log(capitalize("hElLo AkU"))
+
+        function lastLetter(string_2) {
+            let string1 = String(string_2)
+            return string1.at(-1);
+        }
+
+        console.log(lastLetter("THIS IS AKU"))
+
+    </script>
+</body>
+
+</html>
