@@ -6,39 +6,73 @@
     </head>
     <body>
         <script>
-            function add7(numb){
-                const num = numb + 7;
-                return num
+            // function add7(numb){
+            //     const num = numb + 7;
+            //     return num
 
-            }
+            // }
 
-            console.log(add7(3))
-            console.log(add7(4))
+            // console.log(add7(3))
+            // console.log(add7(4))
 
-            function multiply(num1, num2) {
-                const output_num = num1 * num2;
-                return output_num 
-            }
+            // function multiply(num1, num2) {
+            //     const output_num = num1 * num2;
+            //     return output_num 
+            // }
 
-            console.log(multiply(4,3))
+            // console.log(multiply(4,3))
 
-            function capitalize(string_1) {
-                let string1 = String(string_1)
-                string1 = string1.toLowerCase()
-                return string1.charAt(0).toUpperCase() + string1.slice(1)
-            }
+            // function capitalize(string_1) {
+            //     let string1 = String(string_1)
+            //     string1 = string1.toLowerCase()
+            //     return string1.charAt(0).toUpperCase() + string1.slice(1)
+            // }
 
-            console.log(capitalize("hello aku"))
-            console.log(capitalize("HELLO AKU"))
-            console.log(capitalize("hElLo AkU"))
+            // console.log(capitalize("hello aku"))
+            // console.log(capitalize("HELLO AKU"))
+            // console.log(capitalize("hElLo AkU"))
 
-            function lastLetter(string_2) {
-                let string1 = String(string_2)
-                return string1.at(-1);
-            }
+            // function lastLetter(string_2) {
+            //     let string1 = String(string_2)
+            //     return string1.at(-1);
+            // }
 
-            console.log(lastLetter("THIS IS AKU"))
+            // console.log(lastLetter("THIS IS AKU"))
 
+            // let john = { name: "John", age: 25 };
+            // let pete = { name: "Pete", age: 30 };
+            // let mary = { name: "Mary", age: 28 };
+
+            // let users = [john, pete, mary];
+
+            // let names = users.map(people => people.name);
+
+            // console.log(names); // John, Pete, Mary
+
+
+
+            let john = { name: "John", surname: "Smith", id: 1 };
+            let pete = { name: "Pete", surname: "Hunt", id: 2 };
+            let mary = { name: "Mary", surname: "Key", id: 3 };
+
+            let users = [john, pete, mary];
+
+            let usersMapped = users.map(item => ({
+                fullName : `${item.name} ${item.surname}`,
+                id : item.id
+
+            }))
+
+                /*
+                usersMapped = [
+                    { fullName: "John Smith", id: 1 },
+                    { fullName: "Pete Hunt", id: 2 },
+                    { fullName: "Mary Key", id: 3 }
+                ]
+                */
+
+            console.log(usersMapped[0].id) // 1
+            console.log(usersMapped[0].fullName) // 
         </script>
     </body>
 </html>
