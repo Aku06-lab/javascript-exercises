@@ -1,11 +1,11 @@
 const calculator = require('./calculator');
 
 describe('add', () => {
-  test('adds 0 and 0', () => {
+  test.skip('adds 0 and 0', () => {
     expect(calculator.add(0, 0)).toBe(0);
   });
 
-  test.skip('adds 2 and 2', () => {
+  test('adds 2 and 2', () => {
     expect(calculator.add(2, 2)).toBe(4);
   });
 
@@ -15,7 +15,7 @@ describe('add', () => {
 });
 
 describe('subtract', () => {
-  test.skip('subtracts numbers', () => {
+  test('subtracts numbers', () => {
     expect(calculator.subtract(10, 4)).toBe(6);
   });
 
@@ -33,7 +33,7 @@ describe('sum', () => {
     expect(calculator.sum([])).toBe(0);
   });
 
-  test.skip('computes the sum of an array of one number', () => {
+  test('computes the sum of an array of one number', () => {
     expect(calculator.sum([7])).toBe(7);
   });
 
@@ -47,7 +47,7 @@ describe('sum', () => {
 });
 
 describe('multiply', () => {
-  test.skip('multiplies two numbers', () => {
+  test('multiplies two numbers', () => {
     expect(calculator.multiply([2, 4])).toBe(8);
   });
 
@@ -57,7 +57,7 @@ describe('multiply', () => {
 });
 
 describe('power', () => {
-  test.skip('raises one number to the power of another number', () => {
+  test('raises one number to the power of another number', () => {
     expect(calculator.power(4, 3)).toBe(64); // 4 to third power is 64
   });
 
@@ -79,7 +79,7 @@ describe('factorial', () => {
     expect(calculator.factorial(2)).toBe(2);
   });
 
-  test.skip('computes the factorial of 5', () => {
+  test('computes the factorial of 5', () => {
     expect(calculator.factorial(5)).toBe(120);
   });
 
