@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>myLibrary</title>
+    <link rel="stylesheet" href="librarystyle.css">
+    <script src="libraryjs.js" defer></script>
+  </head>
+  <body>
+    <h1 style="text-align: center; border-bottom: 1px solid brown;"> Welcome to Missbehave's Library</h1>
+    <button class = "addnew" id="addnew"> + Add New Book </button>
+    <div class="container">
+      <form class="book_form" id = "formBook" hidden="true">
+        <div class="title">Title : 
+          <input type="text" id="ttle" />
+        </div>
+        <div class="author">Author :
+          <input type="text" id="athor"/>
+        </div>
+        <div class="no_pages">Number of pages :
+          <input type="number" id="num"/>
+        </div>
+        <div class="read_status">Read Status :
+          <input type="text" id="rs" />
+        </div>
+        <div>
+          <button class="submit" id="submit"> Submit </button>
+        </div>
+      </form>
+      <div class="header-row">
+        <div class="col-title">Title</div>
+        <div class="col-author">Author</div>
+        <div class="col-pages"> Number of Pages</div>
+        <div class="col-read-status">Read Status</div>
+        <div></div>
+      </div>
+      <div class="bookList">
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    gap: 10px;
+}
+
+h1 {
+    color: rgb(100, 73, 73);
+}
+
+.container {
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px 20px;
+    background-color: antiquewhite;
+}
+
+.book_form {
+
+    margin: 20px auto;
+    padding: 20px ;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.addnew {
+    border: 2px solid rgb(122, 75, 73);
+    width: 200px;
+    height: 50px;
+    align-content: center;
+    align-self: center;
+    font-weight: bold;
+    font-size: medium;
+    padding: 15px 15px;
+
+}
+
+.bookList {
+    display: grid;
+    border: 2px solid rgb(163, 155, 155);
+    width: 100%;
+    
+}
+.header-row {
+    display: grid;
+    grid-auto-flow: column;
+    font-weight: bold;
+    justify-content: space-between;
+    grid-template-columns: repeat(5 , 1fr);
+    align-items: start;
+    padding:0 20px;
+    width: 100%;
+}
+.book-row {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 10px;
+    grid-template-rows: 1fr;
+    border: 1px solid rgb(103, 103, 105);
+}
+
+.book_form > div button {
+    display: flex;
+    align-self: center;
+    width: 150px;
+    justify-content: center;
+    margin: 25px;
+    border: 2px solid rgb(122, 75, 73);
+    
+}
