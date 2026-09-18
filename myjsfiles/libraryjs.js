@@ -1,13 +1,18 @@
 const myLibrary = [];
 
-function Book( title, author , no_pages, read_status){
-  this.title = title;
-  this.author = author;
-  this.no_pages = no_pages;
-  this.read_status= read_status;
-  this.id = crypto.randomUUID()
+class Book{
+  
+  constructor(title, author, no_pages, read_status) {
+    this.title = title;
+    this.author = author;
+    this.no_pages = no_pages;
+    this.read_status = read_status;
+    this.id = crypto.randomUUID()
+  }
 
 }
+
+
 
 function addBookToLibrary(title, author, no_pages, read_status, id){
 
