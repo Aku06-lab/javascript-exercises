@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> FormValidation</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form class="form" novalidate> 
+            <h1>Form Validation Example :</h1>
+            
+            <label for="mail">Email*: </label>
+            <input type="email" id="mail">
+            <span id="errorEmail" aria-live="polite"></span>
+
+            <label for="pcode">Postal Code*: </label>
+            <input type="text" id="pcode">
+            <span id="errorPcode" aria-live="polite"></span>
+
+            <label for="ctry">Country*: </label>
+            <input type="text" id="ctry">
+            <span id="errorCty" aria-live="polite"></span>
+
+            <label for="pwd">Password*: </label>
+            <input type="password" id="pwd">
+            <span id="errorPwd" aria-live="polite"></span>
+
+            <label for="pwdc">Password Confirmation*: </label>
+            <input type="password" id="pwdc">
+            <span id="errorPwdc" aria-live="polite"></span>
+
+            <button type="submit" class="submitButton">
+                Submit
+            </button>
+        </form>
+    </body>
+</html>
