@@ -67,21 +67,61 @@ function displayBooks (){
 
 
 const addBook = document.querySelector("#addnew");
+const bookform = document.getElementById("formBook");
 
 
 addBook.addEventListener("click", () => {
-
-  const bookform = document.querySelector("#formBook");
-  bookform.hidden = false ;
+ bookform.hidden = false ;
 
 })
 
 const updateLibrary = document.querySelector("#submit");
 
+const inputs = [...bookform.elements];
 
-updateLibrary.addEventListener("click", (event) => {
+inputs.forEach(input => {
+
+  if (input.type === "submit") return;
+
+  input.addEventListener("input", () => {
+
+    const error = document.querySelector(`#${input.id}-error`);
+
+    if (input.validity.valid) {
+      error.textContent = "";
+    }
+
+  });
+
+});
+
+bookform.addEventListener("submit", (event) => {
 
   event.preventDefault();
+
+  let allvalid = true;
+
+  inputs.forEach(input => {
+      if(input.type === "submit"){
+        return;
+      }
+      const error = document.querySelector(`#${input.id}-error`);
+      
+      if(!input.validity.valid){
+        error.textContent = input.dataset.error;
+        allvalid=false;
+        error.style.color = "red";     
+      }
+      else {
+        error.textContent ="";
+      }
+
+  });
+  
+
+  if(!allvalid){
+    return;
+  }
 
   const title = document.querySelector("#ttle").value;
   const author = document.querySelector("#athor").value;
@@ -91,6 +131,6 @@ updateLibrary.addEventListener("click", (event) => {
   addBookToLibrary(title, author, no_pages, read_status);
 
   displayBooks();
+  bookform.reset();
 
-  
-})
+});

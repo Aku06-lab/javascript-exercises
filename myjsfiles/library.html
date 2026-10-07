@@ -9,21 +9,29 @@
     <h1 style="text-align: center; border-bottom: 1px solid brown;"> Welcome to Missbehave's Library</h1>
     <button class = "addnew" id="addnew"> + Add New Book </button>
     <div class="container">
-      <form class="book_form" id = "formBook" hidden="true">
-        <div class="title">Title : 
-          <input type="text" id="ttle" />
+      <form class="book_form" id = "formBook" hidden="true" novalidate>
+        <div class="title" >Title : 
+          <input type="text" id="ttle" required 
+          data-error = "please enter book title"/>
+          <span id="ttle-error"></span>
         </div>
         <div class="author">Author :
-          <input type="text" id="athor"/>
+          <input type="text" id="athor" required
+          data-error = "please enter author"/>
+          <span id="athor-error"></span>
         </div>
         <div class="no_pages">Number of pages :
-          <input type="number" id="num"/>
+          <input type="number" id="num" required
+          data-error = "please enter a valid number"/>
+          <span id="num-error"></span>
         </div>
         <div class="read_status">Read Status :
-          <input type="text" id="rs" />
+          <input type="text" id="rs"  required
+          data-error = "please enter yes or no "/>
+          <span id="rs-error"></span>
         </div>
         <div>
-          <button class="submit" id="submit"> Submit </button>
+          <button type="submit" id="submit"> Submit </button>
         </div>
       </form>
       <div class="header-row">
